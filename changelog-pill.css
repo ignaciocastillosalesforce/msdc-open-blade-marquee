@@ -51,7 +51,7 @@
     backdrop-filter: blur(20px)saturate(180%);
     color: #fff;
     cursor: pointer;
-    background: #0f1c3073;
+    background: #0a122499;
     border: 1px solid #ffffff2e;
     border-radius: 9999px;
     justify-content: space-between;
@@ -88,9 +88,12 @@
 }
 
 #cl-changelog .cl-label {
-    color: #1ab9ff;
-    font-size: 14px;
-    font-weight: 600;
+    color: #1ab9ff !important;
+    -webkit-text-fill-color: #1ab9ff !important;
+    font-family: var(--c360-g-font-family-display, 'Salesforce Sans', sans-serif) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
     letter-spacing: -.025em;
     white-space: nowrap;
     filter: drop-shadow(0 1px 1px #0000000d)
@@ -156,13 +159,19 @@
     height: 18px
 }
 
+#cl-changelog .cl-icon-expand path {
+    stroke: #001639 !important;
+    stroke-width: 3 !important;
+    fill: none !important
+}
+
 #cl-changelog .cl-changelog-button__icon-wrap {
     will-change: transform;
     margin-left: 16px
 }
 
 #cl-changelog .cl-changelog-button__right {
-    color: #001639;
+    color: #001639 !important;
     background: #fff;
     border-radius: 50%;
     place-items: center;
@@ -174,8 +183,10 @@
 }
 
 #cl-changelog .cl-icon-expand {
-    width: 16px;
-    height: 16px;
+    width: 16px !important;
+    height: 16px !important;
+    color: #001639 !important;
+    fill: none !important;
     transition: transform .5s;
     display: block
 }
@@ -465,7 +476,7 @@ main#main-content #agentforce-command-hero #cl-changelog a.cl-button:hover {
 
 @media (min-width:768px) {
     #cl-changelog .cl-label {
-        font-size: 16px
+        font-size: 16px !important
     }
 
     #cl-changelog .cl-changelog-body {
