@@ -1,0 +1,505 @@
+#agentforce-command-hero .eyebrow.cl-eyebrow-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap
+}
+
+#cl-changelog,
+#cl-changelog *,
+#cl-changelog *::before,
+#cl-changelog *::after {
+    box-sizing: border-box
+}
+
+#cl-changelog {
+    --p: 0;
+    position: relative;
+    z-index: 30;
+    width: fit-content;
+    height: 52px;
+    margin-bottom: 32px;
+    padding: 1px 0;
+    text-align: left
+}
+
+#cl-changelog .cl-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background: #000a1a99;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s
+}
+
+#cl-changelog.is-open .cl-backdrop {
+    opacity: 1;
+    pointer-events: auto
+}
+
+#cl-changelog .cl-changelog-button {
+    z-index: 2;
+    -webkit-backdrop-filter: blur(20px)saturate(180%);
+    backdrop-filter: blur(20px)saturate(180%);
+    color: #fff;
+    cursor: pointer;
+    background: #0f1c3073;
+    border: 1px solid #ffffff2e;
+    border-radius: 9999px;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+    margin: 0;
+    padding: 0 16px 0 22px;
+    transition: border-color 0s .5s, background-color 0s .5s, -webkit-backdrop-filter 0s .5s, backdrop-filter 0s .5s, box-shadow .3s;
+    display: inline-flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: visible
+}
+
+#cl-changelog.is-open .cl-changelog-button {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: none;
+    background-color: #0000;
+    border-color: #0000;
+    transition-delay: 0s
+}
+
+#cl-changelog .cl-changelog-button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px #1ab9ff66
+}
+
+#cl-changelog .cl-changelog-button__left {
+    align-items: center;
+    gap: 16px;
+    display: flex
+}
+
+#cl-changelog .cl-label {
+    color: #1ab9ff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -.025em;
+    white-space: nowrap;
+    filter: drop-shadow(0 1px 1px #0000000d)
+}
+
+#cl-changelog .cl-pulse {
+    background: radial-gradient(circle, #00ff7859 0%, #00ff7800 70%);
+    border-radius: 50%;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    position: relative
+}
+
+#cl-changelog .cl-pulse-dot {
+    background: #0f5;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    box-shadow: 0 0 10px #0f5
+}
+
+#cl-changelog .cl-pulse-ring,
+#cl-changelog .cl-pulse-fill {
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    animation: 1.2s cubic-bezier(0, 0, .2, 1) infinite cl-ping;
+    position: absolute
+}
+
+#cl-changelog .cl-pulse-ring {
+    border: 1.5px solid #0f5
+}
+
+#cl-changelog .cl-pulse-fill {
+    opacity: .3;
+    background: #0f5;
+    animation-timing-function: ease-out
+}
+
+@keyframes cl-ping {
+    0% {
+        opacity: 1;
+        transform: scale(.5)
+    }
+
+    75%,
+    to {
+        opacity: 0;
+        transform: scale(1.6)
+    }
+}
+
+#cl-changelog .cl-divider {
+    background: #ffffff40;
+    flex-shrink: 0;
+    width: 1px;
+    height: 18px
+}
+
+#cl-changelog .cl-changelog-button__icon-wrap {
+    will-change: transform;
+    margin-left: 16px
+}
+
+#cl-changelog .cl-changelog-button__right {
+    color: #001639;
+    background: #fff;
+    border-radius: 50%;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    transition: background-color .2s, transform .2s;
+    display: grid;
+    box-shadow: 0 2px 8px #00000040
+}
+
+#cl-changelog .cl-icon-expand {
+    width: 16px;
+    height: 16px;
+    transition: transform .5s;
+    display: block
+}
+
+#cl-changelog .cl-changelog-panel {
+    pointer-events: none;
+    width: min(780px, 100vw - 48px);
+    max-width: 780px;
+    position: relative
+}
+
+#cl-changelog.is-open .cl-changelog-panel {
+    pointer-events: auto
+}
+
+#cl-changelog .cl-changelog-shadow {
+    transform: scale(var(--p, 0));
+    opacity: var(--p, 0);
+    transform-origin: 0 0;
+    pointer-events: none;
+    border-radius: 28px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 30px 70px #00000080
+}
+
+#cl-changelog .cl-changelog-bg {
+    -webkit-backdrop-filter: blur(36px)saturate(180%);
+    backdrop-filter: blur(36px)saturate(180%);
+    clip-path: inset(0 100% 100% 0 round 28px);
+    background: #ffffff1f;
+    border: 1px solid #ffffff38;
+    border-radius: 28px;
+    position: relative;
+    overflow: hidden
+}
+
+#cl-changelog .cl-changelog-frame {
+    border-radius: 28px;
+    padding-top: 48px;
+    overflow: hidden;
+    box-shadow: inset 0 1.5px #ffffff40
+}
+
+#cl-changelog .cl-changelog-body {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    transition: opacity .5s ease-in-out, visibility 0s .5s
+}
+
+#cl-changelog.is-open .cl-changelog-body {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    height: 500px;
+    transition: opacity .5s ease-in-out, visibility;
+    overflow-y: scroll
+}
+
+#cl-changelog .cl-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: left
+}
+
+#cl-changelog .cl-col-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+#cl-changelog .cl-col-side {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-height: 460px;
+    padding-right: 4px;
+    overflow-y: auto
+}
+
+#cl-changelog .cl-video {
+    display: block;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #0f172a;
+    border: 1px solid #fff3;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a
+}
+
+#cl-changelog .cl-video img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .9;
+    transition: transform .7s
+}
+
+#cl-changelog .cl-video:hover img {
+    transform: scale(1.05)
+}
+
+#cl-changelog .cl-video__shade {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #0003;
+    transition: background-color .15s
+}
+
+#cl-changelog .cl-video:hover .cl-video__shade {
+    background: #0000001a
+}
+
+#cl-changelog .cl-video__play {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#cl-changelog .cl-video__play span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    color: #fff;
+    background: #ffffff4d;
+    border: 1px solid #fff6;
+    border-radius: 50%;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 25px -5px #0000001a, 0 8px 10px -6px #0000001a;
+    transition: transform .15s
+}
+
+#cl-changelog .cl-video:hover .cl-video__play span {
+    transform: scale(1.1)
+}
+
+#cl-changelog .cl-video__play svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 4px;
+    fill: currentColor
+}
+
+#cl-changelog .cl-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    border-radius: 9999px
+}
+
+#cl-changelog .cl-tag--sm {
+    padding-top: 2px;
+    padding-bottom: 2px
+}
+
+#cl-changelog .cl-tag--video {
+    background: #c026d3;
+    box-shadow: 0 1px 2px #0000000d
+}
+
+#cl-changelog .cl-tag--report {
+    background: #00bba7
+}
+
+#cl-changelog .cl-tag--webinar {
+    background: #2b19a1
+}
+
+#cl-changelog .cl-tag--announcement {
+    background: #ff7700
+}
+
+#cl-changelog .cl-featured {
+    margin: 0 0 4px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #fff
+}
+
+#cl-changelog .cl-featured + .cl-featured {
+    margin: 0;
+    line-height: 28px
+}
+
+#cl-changelog .cl-cta {
+    margin-top: 24px
+}
+
+#cl-changelog .cl-item {
+    display: block;
+    font-weight: 700
+}
+
+#cl-changelog .cl-item--divided {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ffffff1a
+}
+
+#cl-changelog .cl-item__title {
+    margin: 8px 0;
+    font-weight: 600;
+    line-height: 1.375;
+    text-decoration: underline
+}
+
+#cl-changelog .cl-item__meta {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff9
+}
+
+#cl-changelog .cl-item--divided .cl-item__meta {
+    font-weight: 600;
+    color: #ffffffe6
+}
+
+#cl-changelog p.cl-meta {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff9
+}
+
+#cl-changelog .cl-underline {
+    text-decoration: underline !important
+}
+
+/* Outranks the page-wide "main#main-content a" rule (white, underlined, !important) */
+main#main-content #agentforce-command-hero #cl-changelog a {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+    font-weight: inherit !important;
+    text-decoration: none !important
+}
+
+main#main-content #agentforce-command-hero #cl-changelog a:hover {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important
+}
+
+main#main-content #agentforce-command-hero #cl-changelog a.cl-underline {
+    text-decoration: underline !important
+}
+
+main#main-content #agentforce-command-hero #cl-changelog a.cl-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600 !important;
+    line-height: 20px;
+    border: 1px solid #fff;
+    border-radius: 9999px;
+    transition: background-color .2s
+}
+
+main#main-content #agentforce-command-hero #cl-changelog a.cl-button:hover {
+    background: #ffffff26
+}
+
+@media (min-width:768px) {
+    #cl-changelog .cl-label {
+        font-size: 16px
+    }
+
+    #cl-changelog .cl-changelog-body {
+        padding: 32px
+    }
+
+    #cl-changelog .cl-grid {
+        grid-template-columns: repeat(12, minmax(0, 1fr))
+    }
+
+    #cl-changelog .cl-col-main {
+        grid-column: span 7 / span 7
+    }
+
+    #cl-changelog .cl-col-side {
+        grid-column: span 5 / span 5
+    }
+}
+
+@media (min-width:1024px) {
+    #cl-changelog .cl-changelog-button__left {
+        transform: translate(calc(var(--p, 0) * 12px), calc(var(--p, 0) * 12px))
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+    #cl-changelog .cl-pulse-ring,
+    #cl-changelog .cl-pulse-fill,
+    #cl-changelog .cl-icon-expand,
+    #cl-changelog .cl-changelog-button,
+    #cl-changelog .cl-changelog-frame,
+    #cl-changelog .cl-changelog-body {
+        transition: none;
+        animation: none
+    }
+}
