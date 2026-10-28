@@ -66,6 +66,11 @@
     eyebrow.parentNode.insertBefore(root, eyebrow);
     eyebrow.classList.add("cl-eyebrow-hidden");
 
+    for (var el = root.parentNode; el && el !== document.body; el = el.parentNode) {
+      el.classList.add("cl-overflow-visible");
+      if (el.matches(HERO)) break;
+    }
+
     var button = root.querySelector(".cl-changelog-button");
     var label = root.querySelector(".cl-label");
     var iconWrap = root.querySelector(".cl-changelog-button__icon-wrap");
