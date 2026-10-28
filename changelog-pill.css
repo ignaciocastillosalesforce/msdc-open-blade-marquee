@@ -255,7 +255,7 @@
     pointer-events: auto;
     height: auto;
     transition: opacity .5s ease-in-out, visibility;
-    overflow-y: scroll
+    overflow-y: auto
 }
 
 #cl-changelog .cl-grid {
