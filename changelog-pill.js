@@ -1,9 +1,9 @@
 (function () {
   var HERO = "#agentforce-command-hero";
   var LABEL_CLOSED = "Discover the latest from MuleSoft";
-  var LABEL_OPEN = "What’s the latest for Data 360";
+  var LABEL_OPEN = "Discover the latest from MuleSoft";
   var VIDEO_URL =
-    "/plus/experience/dreamforce_2026/series/data_360_-_activate_trusted_context_everywhere_at_dreamforce_2026/episode/episode-s1e6";
+    "https://www.salesforce.com/plus/experience/dreamforce_2026/series/salesforce_platform_at_dreamforce_2026/episode/episode-s1e5";
 
   var ICON_EXPAND =
     '<span class="cl-changelog-button__right"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="cl-icon-expand"><path d="M12 4V20M4 12H20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span>';
@@ -27,32 +27,31 @@
     '<div class="cl-col-main">' +
     "<div>" +
     '<a class="cl-video" href="' + VIDEO_URL + '" target="_blank" rel="noopener">' +
-    '<img src="https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2026/09/video-thumbnail.png" alt="Data 360 Keynote" loading="lazy">' +
+    '<img src="https://wp.sfdcdigital.com/mulesoft/en-us/wp-content/uploads/sites/40/2026/10/changelog-pill-keynote.jpg" alt="Data 360 Keynote" loading="lazy">' +
     '<span class="cl-video__shade"></span>' +
     '<span class="cl-video__play"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>' +
     "</a>" +
     '<div><span class="cl-tag cl-tag--video">Video</span></div>' +
-    '<p class="cl-featured" style="margin-top:8px">Data 360 Keynote: Context is Your Competitive Advantage</p>' +
-    '<p class="cl-featured">Data 360: Context is your AI advantage</p>' +
+    '<p class="cl-featured" style="margin-top:8px">MuleSoft Keynote: From AI to ROI with Agent Fabric</p>' +
     "</div>" +
     '<div class="cl-cta"><a class="cl-button" href="' + VIDEO_URL + '" target="_blank" rel="noopener">Sign up to see it live or on Salesforce+</a></div>' +
     "</div>" +
     '<div class="cl-col-side">' +
-    '<a class="cl-item" href="/data/resources/forrester-cdp-2026/" aria-label="Forrester" target="_blank" rel="noopener">' +
-    '<div><span class="cl-tag cl-tag--sm cl-tag--report">Report</span></div>' +
-    '<p class="cl-item__title">Forrester Wave names Salesforce a leader in CDP</p>' +
-    '<p class="cl-item__meta">Oct 14, 2025 • 4 min read</p>' +
+    '<a class="cl-item" href="https://www.salesforce.com/news/stories/agent-fabric-catch-failures-control-ai-costs/" aria-label="Forrester" target="_blank" rel="noopener">' +
+    '<div><span class="cl-tag cl-tag--sm cl-tag--report">New</span></div>' +
+    '<p class="cl-item__title">Built-in safeguards to catch AI agent failures and eliminate runaway spend.</p>' +
+    '<p class="cl-item__meta">October 27, 2026 • 3 min read</p>' +
     "</a>" +
-    '<a class="cl-item cl-item--divided" href="/events/webinars/data-360-headless-bring-trusted-business-context-to-every-agent-every-surface/">' +
-    '<div><span class="cl-tag cl-tag--sm cl-tag--webinar">Webinar</span></div>' +
-    '<p class="cl-item__title">Data 360 Headless: Bring Trusted Business Context to Every Agent, Every Surface</p>' +
-    '<p class="cl-item__meta">Oct 14, 2025 • 8 min read</p>' +
+    '<a class="cl-item" href="/lp/reports/forrester-wave-apim">' +
+    '<div><span class="cl-tag cl-tag--sm cl-tag--webinar">Report</span></div>' +
+    '<p class="cl-item__title">MuleSoft named a Leader by Forrester</p>' +
+    '<p class="cl-item__meta">October 2, 2026 • 4 min read</p>' +
     "</a>" +
-    '<div><span class="cl-tag cl-tag--sm cl-tag--announcement">Announcement</span></div>' +
-    '<a class="cl-item" href="/news/stories/expanding-headless-360-enterprise-capabilities/">' +
-    '<p class="cl-item__title">Extend the power of Data 360 to any agent, app, or dev tool.</p>' +
+    '<div><span class="cl-tag cl-tag--sm cl-tag--announcement">Pricing</span></div>' +
+    '<a class="cl-item" href="/pricing">' +
+    '<p class="cl-item__title">New pricing: now starting at $2k per month</p>' +
     "</a>" +
-    '<p class="cl-meta">July 17, 2025 • <a class="cl-underline" href="/data">Read Now</a></p>' +
+    '<p class="cl-meta">September 14, 2026 • 3 min read</p>' +
     "</div>" +
     "</div>" +
     "</div></div></div>" +
