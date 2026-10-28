@@ -34,7 +34,7 @@
     '<div><span class="cl-tag cl-tag--video">Video</span></div>' +
     '<p class="cl-featured" style="margin-top:8px">MuleSoft Keynote: From AI to ROI with Agent Fabric</p>' +
     "</div>" +
-    '<div class="cl-cta"><a class="cl-button" href="' + VIDEO_URL + '" target="_blank" rel="noopener">Sign up to see it live or on Salesforce+</a></div>' +
+    '<div class="cl-cta"><a class="cl-button" href="' + VIDEO_URL + '" target="_blank" rel="noopener">Discover what’s new</a></div>' +
     "</div>" +
     '<div class="cl-col-side">' +
     '<a class="cl-item" href="https://www.salesforce.com/news/stories/agent-fabric-catch-failures-control-ai-costs/" aria-label="Forrester" target="_blank" rel="noopener">' +
