@@ -47,11 +47,11 @@
     '<p class="cl-item__title">MuleSoft named a Leader by Forrester</p>' +
     '<p class="cl-item__meta">October 2, 2026 • 4 min read</p>' +
     "</a>" +
-    '<div><span class="cl-tag cl-tag--sm cl-tag--announcement">Pricing</span></div>' +
     '<a class="cl-item" href="/pricing">' +
+    '<div><span class="cl-tag cl-tag--sm cl-tag--announcement">Pricing</span></div>' +
     '<p class="cl-item__title">New pricing: now starting at $2k per month</p>' +
-    "</a>" +
     '<p class="cl-meta">September 14, 2026 • 3 min read</p>' +
+    "</a>" +
     "</div>" +
     "</div>" +
     "</div></div></div>" +
