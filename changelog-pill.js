@@ -1,6 +1,6 @@
 (function () {
   var HERO = "#agentforce-command-hero";
-  var LABEL_CLOSED = "Discover the latest from Data 360";
+  var LABEL_CLOSED = "Discover the latest from MuleSoft";
   var LABEL_OPEN = "What’s the latest for Data 360";
   var VIDEO_URL =
     "/plus/experience/dreamforce_2026/series/data_360_-_activate_trusted_context_everywhere_at_dreamforce_2026/episode/episode-s1e6";
