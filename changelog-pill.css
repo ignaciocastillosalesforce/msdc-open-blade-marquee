@@ -467,16 +467,22 @@ main#main-content #agentforce-command-hero #cl-changelog a.cl-underline {
 main#main-content #agentforce-command-hero #cl-changelog a.cl-button {
     display: inline-block;
     padding: 10px 20px;
+    color: #0176d3 !important;
+    -webkit-text-fill-color: #0176d3 !important;
+    font-family: var(--c360-g-font-family-display, 'Salesforce Sans', sans-serif) !important;
     font-size: 14px;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
     line-height: 20px;
-    border: 1px solid #fff;
+    background: #fff;
+    border: 2px solid #0176d3;
     border-radius: 9999px;
-    transition: background-color .2s
+    transition: background-color .2s, color .2s
 }
 
 main#main-content #agentforce-command-hero #cl-changelog a.cl-button:hover {
-    background: #ffffff26
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+    background: #0176d3
 }
 
 @media (min-width:768px) {
